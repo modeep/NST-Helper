@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Image Correction</title>
+    </head>
+    <body>
+        <h1>Confirm your Image</h1>
+        <h2>Base Image:</h2>
+        <img src="{{ url_for('static', filename=b_filename) }}" height="400" width="400">
+        <h2>Style Image:</h2>
+        <img src="{{ url_for('static', filename=s_filename) }}" height="400" width="400">
+        <br><br>
+        <p>Images' sizes are changed to 400px * 400px, because of efficiency of neural style transfer.</p>
+        <p>To continue, press 'Start' Button to start transfer.</p>
+        <p>To change images, press 'Back' Button to return to index page.</p>
+        <form action="http://localhost:5000/" method="get">
+            <input type="submit" value="Back">
+        </form>
+        <form action="http://localhost:5000/start" method="get">
+            <input type="submit" value="Start">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to NST-Helper!</title>
+    </head>
+    <body>
+        <h1>What is NST-Helper?</h1>
+        <p>NST-Helper is a program that makes NST-ed images to you, has based in web service.</p>
+        <p></p>
+        <h2>Upload your Base Image</h2>
+        <form action="http://localhost:5000/uploadImage" method="post" enctype="multipart/form-data">
+            <input type="file" accept="image/jpeg" name="base">
+            <h2>Upload your Style Image</h2>
+            <input type="file" accept="image/*" name="style">
+            <br><br>
+            <input type="submit" value="Upload">
+        </form>
+    </body>
+</html>
